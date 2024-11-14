@@ -1,0 +1,14 @@
+{
+  "name": "Generate B2B Content",
+  "id": "b2b-content-generator",
+  "api": "1.0.0",
+  "main": "code.js",
+  
+  "editorType": ["figma"],
+  "menu": [
+    {
+      "name": "Generate Brand Name",
+      "command": "generate-text"
+    }
+  ]
+}
