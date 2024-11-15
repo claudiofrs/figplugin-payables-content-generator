@@ -1,6 +1,6 @@
 // List of items to randomize from
 
-const budgetNames = [
+const budgetList = [
   "Operating",
   "Marketing",
   "IT",
@@ -150,14 +150,13 @@ const merchantList = [
   "Box",
 ];
 
-// Function to get a random item from the list
-function getRandomItem() {
-  console.log("plugin ran")
-  return merchantList[Math.floor(Math.random() * merchantList.length)];
+// Function to get a random item from a specified list
+function getRandomItem(list) {
+  return list[Math.floor(Math.random() * list.length)];
 }
 
 // Main function that runs when the plugin command is triggered
-async function generateRandomText() {
+async function generateRandomText(list = merchantList) {
   const selection = figma.currentPage.selection;
 
   if (selection.length === 0) {
@@ -173,7 +172,7 @@ async function generateRandomText() {
       await figma.loadFontAsync(node.fontName);
 
       // Update the text content with a random item
-      node.characters = getRandomItem();
+      node.characters = getRandomItem(list);
     }
   }
 
@@ -181,5 +180,19 @@ async function generateRandomText() {
   figma.closePlugin();
 }
 
-// Execute the main function
-generateRandomText();
+// Example usage for `merchantList`
+// Map commands to their respective lists
+const commandLists = {
+  'random-merchant': merchantList,
+  'random-budget': budgetList,
+  'random-department': departmentList,
+};
+
+figma.on('run', ({ command }) => {
+  const list = commandLists[command];
+  if (list) {
+    generateRandomText(list); // Use the appropriate list based on the command
+  } else {
+    figma.closePlugin("Unknown command.");
+  }
+});

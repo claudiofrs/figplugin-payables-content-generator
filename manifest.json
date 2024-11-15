@@ -7,8 +7,16 @@
   "editorType": ["figma"],
   "menu": [
     {
-      "name": "Generate Brand Name",
-      "command": "generate-text"
+      "name": "Generate Merchant Name",
+      "command": "random-merchant"
+    },
+    {
+      "name": "Generate Department Name",
+      "command": "random-department"
+    },
+    {
+      "name": "Generate Budget Name",
+      "command": "random-budget"
     }
   ]
 }
