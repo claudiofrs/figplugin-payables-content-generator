@@ -25,11 +25,8 @@ Internal tools created to improve the designer workflow in Summit
 1. I am randomizing this content based on ChatGPT
 2. All data here are fake. Any resemblance/similarities are purely coincidence
 3. Modify this to your needs for internal usage
-4. Do not re-distribute and publish the code for public usage without credits
 
 #### Roadmap
-1. Internal test
-2. Figma Community Release
-3. More features: Expense description
-5. More features: Generate avatar for merchant
-6. More features: Enable custom content
+1. More features: Expense description
+2. More features: Generate avatar for merchant
+3. More features: Enable custom content
