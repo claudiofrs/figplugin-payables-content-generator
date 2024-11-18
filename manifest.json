@@ -17,6 +17,10 @@
     {
       "name": "Generate Budget Name",
       "command": "random-budget"
+    },
+    {
+      "name": "Generate Expense Category",
+      "command": "random-category"
     }
   ]
 }

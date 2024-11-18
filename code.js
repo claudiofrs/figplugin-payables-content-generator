@@ -1,5 +1,30 @@
 // List of items to randomize from
 
+const expenseCategories = [
+  "Office Supplies",
+  "Employee Benefits",
+  "Travel and Transportation",
+  "Marketing and Advertising",
+  "Software Subscriptions",
+  "Professional Services",
+  "Legal and Compliance",
+  "Training and Development",
+  "IT Infrastructure",
+  "Cloud Services",
+  "Utilities and Internet",
+  "Default",
+  "Facilities Management",
+  "Consulting Fees",
+  "R&D Expenses",
+  "SaaS Subscriptions",
+  "Recruitment Costs",
+  "Corporate Gifts",
+  "Event Management",
+  "Vendor Payments",
+  "Freight and Shipping",
+  "Inventory Procurement",
+];
+
 const budgetList = [
   "Operating",
   "Marketing",
@@ -183,9 +208,10 @@ async function generateRandomText(list = merchantList) {
 // Example usage for `merchantList`
 // Map commands to their respective lists
 const commandLists = {
-  'random-merchant': merchantList,
-  'random-budget': budgetList,
-  'random-department': departmentList,
+  "random-merchant": merchantList,
+  "random-budget": budgetList,
+  "random-department": departmentList,
+  "random-category": expenseCategories,
 };
 
 figma.on('run', ({ command }) => {
